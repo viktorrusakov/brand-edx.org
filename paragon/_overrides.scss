@@ -17,11 +17,11 @@
 // Badges
 
 .badge {
-  font-family: $font-family-sans-serif;
+  font-family: var(--pgn-font-family-sans-serif);
   line-height: 1.25rem;
 
   &.badge-info {
-    color: $gray-900;
+    color: var(--pgn-color-gray-900);
   }
 }
 
@@ -50,8 +50,8 @@
 
 @each $color, $value in $theme-colors {
   .btn-outline-#{$color} {
-    background: $white;
-    border-color: $light-300;
+    background: var(--pgn-color-white);
+    border-color: var(--pgn-color-light-300);
     &:not(:disabled):not(.disabled) {
       &:hover, &:focus, &:active, &.hover, &.focus, &.active {
         background: $value;
@@ -65,46 +65,46 @@
 .btn-primary {
   &:not(:disabled):not(.disabled) {
     &:hover, &:focus, &:active, &.hover, &.focus, &.active {
-      background: $primary-300;
+      background: var(--pgn-color-primary-300);
       border-color: transparent;
-      color: $white;
+      color: var(--pgn-color-white);
     }
   }
 }
 
 .btn-inverse-outline-primary {
   background: transparent;
-  color: $white;
-  border-color: $gray-500;
+  color: var(--pgn-color-white);
+  border-color: var(--pgn-color-gray-500);
   &:not(:disabled):not(.disabled) {
     &:hover, &:focus, &:active, &.hover, &.focus, &.active {
-      background: $white;
+      background: var(--pgn-color-white);
       border-color: transparent;
-      color: $primary;
+      color: var(--pgn-color-primary-base);
     }
   }
 }
 
 .btn-inverse-outline-brand {
   background: transparent;
-  color: $white;
-  border-color: $white;
+  color: var(--pgn-color-white);
+  border-color: var(--pgn-color-white);
   &:not(:disabled):not(.disabled) {
     &:hover, &:focus, &:active, &.hover, &.focus, &.active {
-      background: $brand;
+      background: var(--pgn-color-brand-base);
       border-color: transparent;
-      color: $white;
+      color: var(--pgn-color-white);
     }
   }
 }
 
 .btn-inverse-brand {
-  background: $brand;
-  color: $white;
+  background: var(--pgn-color-brand-base);
+  color: var(--pgn-color-white);
   border-color: transparent;
   &:not(:disabled):not(.disabled) {
     &:hover, &:focus, &:active, &.hover, &.focus, &.active {
-      background: $brand-700;
+      background: var(--pgn-color-brand-700);
       border-color: transparent;
       color: white;
     }
@@ -112,21 +112,21 @@
 }
 
 .btn-inverse-primary {
-  background: $white;
-  color: $primary;
+  background: var(--pgn-color-white);
+  color: var(--pgn-color-primary-base);
   border-color: transparent;
   &:not(:disabled):not(.disabled) {
     &:hover, &:focus, &:active, &.hover, &.focus, &.active {
-      background: $primary-300;
+      background: var(--pgn-color-primary-300);
       border-color: transparent;
-      color: $white;
+      color: var(--pgn-color-white);
     }
   }
 }
 
 // Avatar buttons in tertiary style (the default) are darker than regular tertiary buttons
 .btn-avatar.btn-tertiary {
-  color: $primary-500;
+  color: var(--pgn-color-primary-500);
 }
 
 // Forms
@@ -141,7 +141,7 @@
   // Do not use validation color for feedback text
   // Add the validation icon to feedback text
   .#{$state}-feedback {
-    color: $body-color;
+    color: var(--pgn-body-color);
     font-weight: 400;
     &:before {
       background-image: str-replace($icon, "#", "%23");
@@ -161,7 +161,7 @@
     &.is-#{$state} {
       &:focus {
         border-color: $color;
-        box-shadow: 0 0 0 $input-focus-width $color;
+        box-shadow: 0 0 0 var(--pgn-form-input-focus-width) $color;
       }
     }
   }
@@ -171,7 +171,7 @@
     &.is-#{$state} {
       &:focus {
         border-color: $color;
-        box-shadow: 0 0 0 $input-focus-width $color;
+        box-shadow: 0 0 0 var(--pgn-form-input-focus-width) $color;
       }
     }
   }
@@ -187,19 +187,19 @@ select.form-control {
 }
 
 .popover-header {
-  border-bottom: solid 1px $gray-100;
+  border-bottom: solid 1px var(--pgn-color-gray-100);
 }
 
 // Grid
 
 .container {
-  padding-left: $grid-gutter-width;
-  padding-right: $grid-gutter-width;
+  padding-left: var(--pgn-grid-gutter-width);
+  padding-right: var(--pgn-grid-gutter-width);
 }
 
 .container-fluid {
-  padding-left: $grid-gutter-width;
-  padding-right: $grid-gutter-width;
+  padding-left: var(--pgn-grid-gutter-width);
+  padding-right: var(--pgn-grid-gutter-width);
 }
 
 
@@ -257,9 +257,9 @@ h6, .h6 {
 p > a[href]:not(.btn),
 a.inline-link {
   text-decoration-line: underline;
-  text-decoration-color: rgba($link-color, .3);
+  text-decoration-color: rgba(var(--pgn-link-color-base), .3);
   &:hover {
-    text-decoration-color: rgba($link-color, 1);
+    text-decoration-color: rgba(var(--pgn-link-color-base), 1);
   }
 }
 
@@ -268,28 +268,28 @@ a.inline-link {
 .pgn__searchfield {
   border-radius: 0 !important;
   .btn {
-    background: $input-bg;
+    background: var(--pgn-form-input-bg-base);
     display: flex;
   }
   &.has-focus {
     .btn {
-      background: $input-focus-bg;
+      background: var(--pgn-form-input-focus-bg);
     }
-    border-color: $input-focus-border-color !important;
+    border-color: var(--pgn-form-input-focus-color-border) !important;
   }
 }
 
 // Progress Bar
 .progress {
-  border: $progress-bar-border-width solid $progress-bar-border-color;
+  border: var(--pgn-progress-border-width) solid var(--pgn-progress-border-color);
 }
 .progress-bar {
-  background-color: $progress-bar-bg;
+  background-color: var(--pgn-progress-bar-bg);
 }
 
 // Bubble
 .pgn__bubble {
   &.pgn__bubble-warning {
-    color: $gray-900;
+    color: var(--pgn-color-gray-900);
   }
 }
