@@ -21,7 +21,7 @@
   line-height: 1.25rem;
 
   &.badge-info {
-    color: var(--pgn-color-gray-900);
+    color: var(--pgn-color-white);
   }
 }
 
@@ -257,9 +257,9 @@ h6, .h6 {
 p > a[href]:not(.btn),
 a.inline-link {
   text-decoration-line: underline;
-  text-decoration-color: rgba(var(--pgn-link-color-base), .3);
+  text-decoration-color: rgba($link-color, .3);
   &:hover {
-    text-decoration-color: rgba(var(--pgn-link-color-base), 1);
+    text-decoration-color: rgba($link-color, 1);
   }
 }
 
@@ -290,6 +290,6 @@ a.inline-link {
 // Bubble
 .pgn__bubble {
   &.pgn__bubble-warning {
-    color: var(--pgn-color-gray-900);
+    color: var(--pgn-color-white);
   }
 }
